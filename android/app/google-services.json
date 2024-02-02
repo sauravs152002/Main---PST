@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "905108314809",
+    "project_id": "pestprediction",
+    "storage_bucket": "pestprediction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905108314809:android:e8d7d8cfb529a0501d1968",
+        "android_client_info": {
+          "package_name": "com.example.mainproject_crop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7qgoULOM764tP9qUv3X2H6WA9-3_rGKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

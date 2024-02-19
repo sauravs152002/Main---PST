@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mainproject_crop/views/prediction.dart';
 import 'package:mainproject_crop/views/profile.dart';
 import 'package:mainproject_crop/views/screen2.dart';
 import 'package:mainproject_crop/views/screen3.dart';
@@ -106,6 +107,44 @@ class _TasksPageState extends State<TasksPage> {
                     ],
                   ),
                   SizedBox(height: 25),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>  MLFormPage()));
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 123, 0, 245),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(
+                                Icons.add,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              Text(
+                                "Get prediction result",
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -129,16 +168,15 @@ class _TasksPageState extends State<TasksPage> {
                           ProjectName: "Week 1", CompletedPercent: 30),
                       ProgressCard(
                           ProjectName: "Week 2", CompletedPercent: 30),
-                      ProgressCard(
-                          ProjectName: "Week 3", CompletedPercent: 30),
-                      ProgressCard(
-                          ProjectName: "Week 4", CompletedPercent: 30),
+                     
+                      
                     ]),
                   )
                 ],
               ),
             )
           ],
+          
         ),
       ),
     );

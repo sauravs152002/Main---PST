@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mainproject_crop/functions.dart';
 
 class AddNewTask extends StatefulWidget {
   const AddNewTask({Key? key}) : super(key: key);
@@ -10,6 +14,10 @@ class AddNewTask extends StatefulWidget {
 
 
 class _AddNewTaskState extends State<AddNewTask> {
+  String url='';
+  var data;
+  String output='Intial Output';
+
   final _Titlecontroller = TextEditingController();
  @override
   Widget build(BuildContext context) {
@@ -73,6 +81,7 @@ class _AddNewTaskState extends State<AddNewTask> {
                         fontSize: 15,
                       ),
                     ),
+                   
                   ),
                 ),
                 Container(
@@ -98,19 +107,20 @@ class _AddNewTaskState extends State<AddNewTask> {
                           color: Color.fromRGBO(130, 0, 255, 1),
                         ),
                         alignment: Alignment.center,
-                        child: Text(
-                          "Add device",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                      )
+                        child: Text("Add device",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.normal,
+                          
+                        ),),
+                      ), 
+                      
                     ],
                   ),
                 ),
               ],
+             
             ),
           ),
         ),
